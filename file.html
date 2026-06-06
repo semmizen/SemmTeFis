@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NovaCode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+
+<div class="logo">
+NovaCode
+</div>
+
+<div class="controls">
+
+<select id="themeSelect">
+
+<option>VS Code Dark</option>
+<option>Dracula</option>
+<option>AMOLED</option>
+
+</select>
+
+<select id="languageSelect">
+
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+<option>Lua</option>
+
+</select>
+
+</div>
+
+</header>
+
+<div class="toolbar">
+
+<button id="undoBtn">↶</button>
+
+<button id="redoBtn">↷</button>
+
+<button id="saveBtn">💾</button>
+
+<button id="runBtn">▶</button>
+
+<button id="rawBtn">RAW</button>
+
+</div>
+
+<div class="workspace">
+
+<div class="sidebar">
+
+<div class="file active">
+index.html
+</div>
+
+<div class="file">
+style.css
+</div>
+
+<div class="file">
+script.js
+</div>
+
+</div>
+
+<div id="editor"></div>
+
+<iframe id="preview"></iframe>
+
+</div>
+
+<div id="console">
+
+Console Ready
+
+</div>
+
+<div id="rawModal">
+
+<div class="modalContent">
+
+<input placeholder="Script Name">
+
+<input placeholder="Confirm Name">
+
+<input placeholder="Admin Secret">
+
+<button>Create Raw</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
