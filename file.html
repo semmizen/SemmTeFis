@@ -1,102 +1,129 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>SemmTeFis</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<header class="topbar">
-
-<div class="logo">
-SemmTeFis 
+<title>SemmTeFis</title><link
+    rel="stylesheet"
+    href="style.css"></head><body><header class="topbar"><div class="logo">
+    SemmTeFis
 </div>
 
 <div class="controls">
 
-<select id="themeSelect">
+    <select id="themeSelect">
 
-<option>VS Code Dark</option>
-<option>Dracula</option>
-<option>AMOLED</option>
+        <option>
+            VS Code Dark
+        </option>
 
-</select>
+        <option>
+            Dracula
+        </option>
 
-<select id="languageSelect">
+        <option>
+            AMOLED
+        </option>
 
-<option>HTML</option>
-<option>CSS</option>
-<option>JavaScript</option>
-<option>Lua</option>
+        <option>
+            Light
+        </option>
 
-</select>
+    </select>
+
+    <select id="languageSelect">
+
+        <option>
+            HTML
+        </option>
+
+        <option>
+            CSS
+        </option>
+
+        <option>
+            JavaScript
+        </option>
+
+        <option>
+            Lua
+        </option>
+
+    </select>
 
 </div>
 
-</header>
+</header><div class="toolbar"><button id="undoBtn">
+    ↶ Undo
+</button>
 
-<div class="toolbar">
+<button id="redoBtn">
+    ↷ Redo
+</button>
 
-<button id="undoBtn">↶</button>
+<button id="saveBtn">
+    💾 Save
+</button>
 
-<button id="redoBtn">↷</button>
+<button id="runBtn">
+    ▶ Run
+</button>
 
-<button id="saveBtn">💾</button>
+<button id="downloadBtn">
+    ⬇ Download
+</button>
 
-<button id="runBtn">▶</button>
+<button id="fullscreenBtn">
+    ⛶ Preview
+</button>
 
-<button id="rawBtn">RAW</button>
+<button id="rawBtn">
+    RAW
+</button>
 
-</div>
+</div><div class="workspace"><div class="sidebar">
 
-<div class="workspace">
+    <div class="file active">
+        index.html
+    </div>
 
-<div class="sidebar">
+    <div class="file">
+        style.css
+    </div>
 
-<div class="file active">
-index.html
-</div>
-
-<div class="file">
-style.css
-</div>
-
-<div class="file">
-script.js
-</div>
+    <div class="file">
+        script.js
+    </div>
 
 </div>
 
 <div id="editor"></div>
 
-<iframe id="preview"></iframe>
+<iframe
+    id="preview">
+</iframe>
+
+</div><div id="saveStatus">
+    Ready
+</div><div id="console">
+    Console Ready
+</div><div id="rawModal"><div class="modalContent">
+
+    <input
+        id="scriptName"
+        placeholder="Script Name">
+
+    <input
+        id="confirmName"
+        placeholder="Confirm Name">
+
+    <input
+        id="adminSecret"
+        placeholder="Admin Secret">
+
+    <button id="createRawBtn">
+        Create Raw
+    </button>
 
 </div>
 
-<div id="console">
-
-Console Ready
-
-</div>
-
-<div id="rawModal">
-
-<div class="modalContent">
-
-<input placeholder="Script Name">
-
-<input placeholder="Confirm Name">
-
-<input placeholder="Admin Secret">
-
-<button>Create Raw</button>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+</div><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script><script src="script.js"></script></body></html>
