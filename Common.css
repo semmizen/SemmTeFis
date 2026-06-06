@@ -1,0 +1,320 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --bg:#0f1117;
+    --bg2:#161b22;
+
+    --border:#262c36;
+
+    --text:#e6edf3;
+    --text2:#8b949e;
+
+    --accent:#3b82f6;
+
+    --hover:#1f2937;
+
+    --radius:10px;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-family:
+    Inter,
+    Segoe UI,
+    Arial,
+    sans-serif;
+
+    text-rendering:optimizeLegibility;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+/* =======================
+   HEADER
+======================= */
+
+.topbar{
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 20px;
+
+    background:var(--bg2);
+
+    border-bottom:1px solid var(--border);
+
+    flex-shrink:0;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+
+    color:var(--accent);
+}
+
+.controls{
+    display:flex;
+    gap:12px;
+}
+
+.controls select{
+    background:var(--bg);
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    padding:8px 12px;
+
+    outline:none;
+}
+
+/* =======================
+   TOOLBAR
+======================= */
+
+.toolbar{
+    height:52px;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    padding:0 15px;
+
+    background:var(--bg);
+
+    border-bottom:1px solid var(--border);
+
+    flex-shrink:0;
+}
+
+.toolbar button{
+    background:var(--bg2);
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:10px 14px;
+
+    cursor:pointer;
+
+    transition:.15s;
+}
+
+.toolbar button:hover{
+    background:var(--hover);
+}
+
+/* =======================
+   WORKSPACE
+======================= */
+
+.workspace{
+    flex:1;
+
+    display:flex;
+
+    overflow:hidden;
+}
+
+/* =======================
+   SIDEBAR
+======================= */
+
+.sidebar{
+    width:220px;
+
+    background:var(--bg2);
+
+    border-right:1px solid var(--border);
+
+    overflow-y:auto;
+
+    flex-shrink:0;
+}
+
+.file{
+    padding:14px 16px;
+
+    cursor:pointer;
+
+    border-bottom:1px solid rgba(255,255,255,.03);
+
+    transition:.15s;
+}
+
+.file:hover{
+    background:var(--hover);
+}
+
+.file.active{
+    background:var(--accent);
+
+    color:white;
+}
+
+/* =======================
+   EDITOR
+======================= */
+
+#editor{
+    flex:1;
+
+    min-width:0;
+
+    height:100%;
+
+    overflow:hidden;
+}
+
+/* =======================
+   PREVIEW
+======================= */
+
+#preview{
+    width:40%;
+
+    min-width:350px;
+
+    border:none;
+
+    border-left:1px solid var(--border);
+
+    background:white;
+}
+
+/* =======================
+   CONSOLE
+======================= */
+
+#console{
+    height:140px;
+
+    background:#090b10;
+
+    border-top:1px solid var(--border);
+
+    padding:15px;
+
+    overflow:auto;
+
+    font-family:monospace;
+
+    color:#66ff99;
+
+    flex-shrink:0;
+}
+
+/* =======================
+   RAW MODAL
+======================= */
+
+#rawModal{
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.7);
+
+    backdrop-filter:blur(6px);
+}
+
+.modalContent{
+    width:420px;
+
+    background:var(--bg2);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.modalContent input{
+    width:100%;
+
+    padding:12px;
+
+    background:var(--bg);
+
+    color:white;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    outline:none;
+}
+
+.modalContent button{
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:var(--accent);
+
+    color:white;
+}
+
+/* =======================
+   SCROLLBAR
+======================= */
+
+::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#3a4454;
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#4d5a6f;
+}
